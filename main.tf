@@ -23,5 +23,11 @@ resource "aws_lightsail_instance" "web-server" {
     name = "lamp-server"
     blueprint_id = "centos_7_2009_01"
   bundle_id = "medium_1_0"
+  key_pair_name = "vampy"
   availability_zone = "us-east-1a"
+  tags = {
+    "env" = "dev"
+    "Team" = "devops"
+    "created by" = "valery"
+  }
 }
